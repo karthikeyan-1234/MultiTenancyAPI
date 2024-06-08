@@ -1,0 +1,12 @@
+﻿{
+  "Tenants": [
+    {
+      "Group": "Asia",
+      "ConnectionString": "Data Source=(localdb)\\myInstance;Initial Catalog = AsiaDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+    },
+    {
+      "Group": "US",
+      "ConnectionString": "Data Source=(localdb)\\myInstance;Initial Catalog = USDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+    }
+  ]
+}
