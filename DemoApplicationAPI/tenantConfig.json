@@ -2,11 +2,11 @@
   "Tenants": [
     {
       "Group": "Asia",
-      "ConnectionString": "Data Source=(localdb)\\myInstance;Initial Catalog = AsiaDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+      "ConnectionString": "QQB/d4/eUEL6wj1Y5HZ0yoq9mAcT6B8EEcrd13v01+5pnA/3iuCGs0xXjnZdVrwaCcCAFiRBBbgR1jeb7dyamcxExvX+Z0YtiTOGAxvVsnkPPyfSf/ex73iw/oC15d6byCSHSS7S8bV/YRrARzcdHPP2YNQMzwL1sQIJCCZouha69rVgrAseR8n5WlS/UR2uWDGmTd/yUbMj7fLw2a/4Mco8Y3ofBwqzE3pzQsAbKcuLkFRt95PwJE2X1eLDh6zO5dvVKdLH6cKplOmWRd0Knw=="
     },
     {
       "Group": "US",
-      "ConnectionString": "Data Source=(localdb)\\myInstance;Initial Catalog = USDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+      "ConnectionString": "QQB/d4/eUEL6wj1Y5HZ0yoq9mAcT6B8EEcrd13v01+5pnA/3iuCGs0xXjnZdVrwad9ejwxpseEwqU2OM6sEazI51vI1Yo1AkAcbCj0h51MJHt0JzGEe0CEZZLM5dmUhjSaYhp90NPWBJHCx3Q7THhIHqjmdwQO9SCNpaBR7ONnOvMLzrTJeXisg/jowokd8CaF0EC5npDeDZ52GHwUMlKVtoSAAg6uwe+AHr7eOBgyK6BNtnFhbT34+NaCvrWdVuFYFY4KsG7qyQ1ktsno58Bg=="
     }
   ]
 }

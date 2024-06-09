@@ -4,16 +4,18 @@
     {
         ITenantProvider tenantProvider;
         IHttpContextAccessor httpContextAccessor;
+        ISQLSecurity sqlSecurity;
 
-        public TenantResolver(IHttpContextAccessor httpContextAccessor, ITenantProvider tenantProvider)
+        public TenantResolver(IHttpContextAccessor httpContextAccessor, ITenantProvider tenantProvider, ISQLSecurity sqlSecurity)
         {
             this.httpContextAccessor = httpContextAccessor;
             this.tenantProvider = tenantProvider;
+            this.sqlSecurity = sqlSecurity;
         }
 
         public string? GetConnectionString()
         {
-            string group = "US";
+            string? group = null;
             var claims = httpContextAccessor?.HttpContext?.User.Claims!;
 
             foreach (var claim in claims)
@@ -22,7 +24,12 @@
                     group = claim.Value;
             }
 
-            return tenantProvider?.GetConnectionString(group);
+            string encryptedConnection = tenantProvider?.GetConnectionString(group!)!;
+            string connection = sqlSecurity.DecryptConnection(encryptedConnection)!;
+
+            connection = connection.Replace(@"\\", @"\");
+
+            return connection;
         }
     }
 }

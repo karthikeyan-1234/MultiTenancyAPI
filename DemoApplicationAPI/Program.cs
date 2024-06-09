@@ -15,6 +15,8 @@ builder.Configuration.AddJsonFile("appsettings.json");
 builder.Services.AddScoped<ITenantProvider, TenantProvider>();
 builder.Services.AddScoped<ITenantResolver, TenantResolver>();
 
+builder.Services.AddScoped<ISQLSecurity, SQLSecurity>();
+
 builder.Services.AddDbContext<AppDBContext>(o =>
 {
     o.UseSqlServer(options => options.MigrationsAssembly(typeof(AppDBContext).Assembly.FullName));
